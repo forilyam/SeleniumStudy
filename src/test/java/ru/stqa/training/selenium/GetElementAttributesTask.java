@@ -1,11 +1,9 @@
 package ru.stqa.training.selenium;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -142,7 +140,7 @@ public class GetElementAttributesTask {
     @Test
     public void task10() {
         driver.get("http://localhost/litecart");
-        
+
         driver.findElement(By.cssSelector("a[href='#campaign-products']")).click();
         String titleOfFirstProduct = driver.findElement(By.cssSelector(".name")).getText();
         String regularPrice = driver.findElement(By.cssSelector(".regular-price")).getText();
